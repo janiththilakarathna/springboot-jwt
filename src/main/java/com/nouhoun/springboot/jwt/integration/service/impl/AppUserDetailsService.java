@@ -18,6 +18,7 @@ import java.util.List;
  */
 @Component
 public class AppUserDetailsService implements UserDetailsService {
+
     @Autowired
     private UserRepository userRepository;
 
@@ -25,7 +26,7 @@ public class AppUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User user = userRepository.findByUsername(s);
 
-        if(user == null) {
+        if (user == null) {
             throw new UsernameNotFoundException(String.format("The username %s doesn't exist", s));
         }
 

@@ -1,7 +1,6 @@
 package com.nouhoun.springboot.jwt.integration.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import java.util.List;
