@@ -8,7 +8,9 @@ security:
   jwt:
     client-id: testjwtclientid
     client-secret: XY7kmzoNzl100
-    grant-type: password
+    grant-types: client-credentials, password, refresh_token
     scope-read: read
     scope-write: write
-    resource-ids: testjwtresourceid
+    resource-ids: testjwtresourceid]
+    accessTokenValiditySeconds: 5000
+    refreshTokenValiditySeconds: 50000
