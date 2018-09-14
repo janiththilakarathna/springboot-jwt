@@ -42,6 +42,7 @@ Use one of the several ways of running a Spring Boot application. Below are just
     {
       "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWQiXSwidXNlcl9uYW1lIjoiYWRtaW4uYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNDk0NDU0MjgyLCJhdXRob3JpdGllcyI6WyJTVEFOREFSRF9VU0VSIiwiQURNSU5fVVNFUiJdLCJqdGkiOiIwYmQ4ZTQ1MC03ZjVjLTQ5ZjMtOTFmMC01Nzc1YjdiY2MwMGYiLCJjbGllbnRfaWQiOiJ0ZXN0and0Y2xpZW50aWQifQ.rvEAa4dIz8hT8uxzfjkEJKG982Ree5PdUW17KtFyeec",
       "token_type": "bearer",
+      "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOlsidGVzdGp3dHJlc291cmNlaWRdIl0sInVzZXJfbmFtZSI6ImFkbWluLmFkbWluIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl0sImF0aSI6IjllMWNiOGM1LTNiYzUtNDIzOS04NWZhLWFhMTMxNTg0NDYwMyIsImV4cCI6MTUzNjk3MTU5NywiYXV0aG9yaXRpZXMiOlsiU1RBTkRBUkRfVVNFUiIsIkFETUlOX1VTRVIiXSwianRpIjoiYjk4NjE2YjktNjU1MS00MjEwLTlkNmYtMmRjOWIzZTQ1N2E3IiwiY2xpZW50X2lkIjoidGVzdGp3dGNsaWVudGlkIn0.N81Msj1YTreSVbUcUkTYuDDz366sr7Y_hYt1xwOZe4U",
       "expires_in": 43199,
       "scope": "read write",
       "jti": "0bd8e450-7f5c-49f3-91f0-5775b7bcc00f"
@@ -131,3 +132,7 @@ Use one of the several ways of running a Spring Boot application. Below are just
              }
            ]
            `
+ 3. Get a new access token by sending refresh token
+ 
+    Use the following generic command to get a new access token:
+    `$ curl client:secret@localhost:8080/oauth/token -d grant_type=refresh_token -d refresh_token=$refresh_token`   
