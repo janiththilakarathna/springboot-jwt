@@ -36,7 +36,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Value("${security.jwt.scope-read}")
     private String scopeRead;
     @Value("${security.jwt.scope-write}")
-    private String scopeWrite = "write";
+    private String scopeWrite;
     @Value("${security.jwt.resource-ids}")
     private String resourceIds;
     @Value("${security.jwt.accessTokenValiditySeconds}")
