@@ -25,6 +25,6 @@ CREATE TABLE app_user (
 CREATE TABLE user_role (
   user_id bigint(20) NOT NULL,
   role_id bigint(20) NOT NULL,
-  CONSTRAINT FK859n2jvi8ivhui0rl0esws6o FOREIGN KEY (user_id) REFERENCES app_user (id),
-  CONSTRAINT FKa68196081fvovjhkek5m97n3y FOREIGN KEY (role_id) REFERENCES app_role (id)
+  CONSTRAINT FK_APP_USER_ID FOREIGN KEY (user_id) REFERENCES app_user (id),
+  CONSTRAINT FK_APP_ROLE_ID FOREIGN KEY (role_id) REFERENCES app_role (id)
 );
